@@ -1,5 +1,5 @@
 
-import static java. lang. System.out;
+import static java.lang.System.out;
 
 public class Poem
 {
@@ -48,9 +48,5 @@ public class Poem
         out.println("to fill my head with ideas- only I don't exactly");
         out.println("know what they are! However, SOMEBODY killed");
         out.println("SOMEBTHING: that's clear, at any rate.\"\n");
-        
-        
-        
-        
     }
 }
