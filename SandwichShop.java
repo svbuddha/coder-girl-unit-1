@@ -10,39 +10,47 @@ public class SandwichShop
         int goalForBurgers = 250;
         int goalForSubs = 180;
         int goalForSoup = 70;
+        int veggieSandwichSold;
+        int burgersSold;
+        int subsSold;
+        int soupsSold;
         out.println("Checking sales goals.");
-        out. println("The sales goal for veggie sandwiches is 50");
+        out. println("The sales goal for veggie sandwiches is " + goalForVeggies);
         out.println("How many veggie sandwiches were sold today?");
-        goalForVeggies = keyboard.nextInt();
+        
+        veggieSandwichSold = keyboard.nextInt();
         out.println("");
-        if (goalForVeggies>=50){
+        if (veggieSandwichSold >= goalForVeggies){
             out.println("Made goal for veggies.");      
         } else {
             out.println("Fell short for veggies.");
         }
-        out.println("The sales goal for burgers is 250");
+        out.println("The sales goal for burgers is " + goalForBurgers);
         out.println("How many burgers were sold today?");
-        goalForBurgers = keyboard.nextInt();
+        
+        burgersSold = keyboard.nextInt();
         out.println("");
-        if (goalForBurgers>=250){
+        if (burgersSold >= goalForBurgers){
             out.println("Made goal for burgers.");      
         } else {
             out.println("Fell short for burgers.");
         }
-        out.println("The sales goal for subs is 180");
+        out.println("The sales goal for subs is " + goalForSubs);
         out.println("How many subs were sold today?");
-        goalForSubs = keyboard.nextInt();
+        
+        subsSold = keyboard.nextInt();
         out.println("");
-        if (goalForSubs>=180){
+        if (subsSold >= goalForSubs){
             out.println("Made goal for subs.");      
         } else {
             out.println("Fell short for subs.");
         }
-        out.println("The sales goal for soup is 70");
+        out.println("The sales goal for soup is " + goalForSoup);
         out.println("How many soups were sold today?");
-        goalForSoup = keyboard.nextInt();
+        
+        soupsSold = keyboard.nextInt();
         out.println("");
-        if (goalForSoup>=70){
+        if (soupsSold >= goalForSoup){
             out.println("Made goal for soup.");      
         } else {
             out.println("Fell short for soup.");
@@ -55,4 +63,5 @@ public class SandwichShop
         }
     }   
 }
+
  
