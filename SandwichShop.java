@@ -56,7 +56,8 @@ public class SandwichShop
             out.println("Fell short for soup.");
         }
         out.println("");
-        if (goalForVeggies>=50 && goalForBurgers>=250 && goalForSubs>=180 && goalForSoup>=70){
+        if (veggieSandwichSold >= goalForVeggies && burgersSold >= goalForBurgers 
+        && subsSold >= goalForSubs && subsSold>= goalForSoup){
             out.println("Made goal for everything!");
         } else {
             out.println("Did not reach goal for everything.");
