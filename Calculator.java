@@ -19,7 +19,7 @@ public class Calculator
         return a * b;
     }
 
-    public static int divide(int a, int b)
+    public static float divide(float a, float b)
     {
         // FIX the line below!
         return a / b;
@@ -52,7 +52,7 @@ public class Calculator
         // Now it's your turn! Create a divide() method and write some
         // print statements to test that it works right.
         out.println("9 divided by 3 equals " + divide(9, 3));
-        out.println("4 divided by 2 equals " + divide(4, 2));
+        out.println("2 divided by 8 equals " + divide(2, 8));
 
     }
 }
