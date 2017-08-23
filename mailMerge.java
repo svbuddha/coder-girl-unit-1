@@ -9,6 +9,7 @@ public class mailMerge
         String personName = "";
         float donation;
    
+        out.println("---Thank you Letters---");
         while (!personName.equals("quit"))
         {
             out.println("Please enter a name: ");
@@ -16,7 +17,6 @@ public class mailMerge
             if (!personName.equals("quit")) {
                 out.print("Donation amount: ");
                 donation = number.nextFloat();
-                out.println("----Thank You Letter----");
                 out.println("Dear " + personName + ",");
                 out.println("");
                 out.println("Thank you for your donation! We rely on donors like you to keep our");
