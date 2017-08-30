@@ -1,7 +1,7 @@
 import static java.lang.System.out;
 import java.util.Scanner;
 
-public class MultiplicationTables
+public class MultiplicationTablesGrid
 {
     public static void main (String[] args) {
         int mult; 
@@ -9,15 +9,20 @@ public class MultiplicationTables
         out.println("Welcome to Multiplication Tables");
         out.println("");
         Scanner number = new Scanner(System.in);
-        out.print("How large would you like to see them?");
+        out.print("How large would you like to see them? ");
         num = number.nextInt();
         out.println("");
-        for (int i = 0; i <= num ; i++) {
-            for (int j = 0; j <= num; j++) {
-                mult = i*j;
-                System.out.print("" + mult + " ");
+        if (num <= 20){
+        for (int row = 0; row <= num ; row++)
+        {
+            for (int column = 0; column <= num; column++) {
+                mult = row*column;
+                out.printf("%4d", + mult);
                 }
-                System.out.println();
+            out.println();
             }
-        } 
+        } else {
+            out.print("Number too big.");
+        }
     }
+}
