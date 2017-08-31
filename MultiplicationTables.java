@@ -3,26 +3,25 @@ import java.util.Scanner;
 
 public class MultiplicationTablesGrid
 {
-    public static void main (String[] args) {
-        int mult; 
-        int num;
-        out.println("Welcome to Multiplication Tables");
-        out.println("");
-        Scanner number = new Scanner(System.in);
-        out.print("How large would you like to see them? ");
-        num = number.nextInt();
-        out.println("");
-        if (num <= 20){
-        for (int row = 0; row <= num ; row++)
-        {
-            for (int column = 0; column <= num; column++) {
-                mult = row*column;
-                out.printf("%4d", + mult);
-                }
-            out.println();
-            }
-        } else {
-            out.print("Number too big.");
-        }
-    }
+ public static void main(String[]args)
+ {
+     Scanner keyboard = new Scanner (System.in);
+     out.println("Welcome to Multiplicaion Tables");
+     out.println("");
+     out.print("How large would you like to see them? ");
+     int number = keyboard.nextInt();
+     out.println("");
+     out.print("    ");
+     for (int row = 0; row <= number;row++)
+         out.printf("%4d",row );
+         out.println();
+
+     for ( int col=0; col <= number; col++){
+           out.printf("%4d",col );
+           for(int row=0; row <= number; row++){
+               out.printf("%4d",col * row);
+           }
+           out.println();
+       }
+   }
 }
