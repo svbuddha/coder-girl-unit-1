@@ -10,7 +10,7 @@ public class GuessMyNumber
         int NumGuess = rand.nextInt(100);
         int NumTries = 0;
         Scanner input = new Scanner(System.in);
-        int guessa; int guessb; 
+        int guessa; 
         String playagain = "";
         boolean Game = false;
         out.print("I'm thinking of a number between 1 and 100. What is it?  ");
