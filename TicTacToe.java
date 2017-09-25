@@ -26,17 +26,17 @@ public class TicTacToe {
     }
 
     public static void printBoard(String[][] table) {
-        for (int r = 0; r < table.length; r++) {
-            for (int c = 0; c < table.length; c++) {
-                if (c < (table.length - 1)) {
-                    if (table[r][c] == "X" || table[r][c] == "x" || table[r][c] == "o" || table[r][c] == "O") {
-                        out.print(table[r][c] + "|");
+        for (int row = 0; row < table.length; row++) {
+            for (int column = 0; column < table.length; c++) {
+                if (column < (table.length - 1)) {
+                    if (table[row][column] == "X" || table[row][column] == "x" || table[row][column] == "o" || table[row][column] == "O") {
+                        out.print(table[row][column] + "|");
                     } else {
                         out.print("." + "|");
                     }
                 } else {
-                    if (table[r][c] == "X" || table[r][c] == "O") {
-                        out.println(table[r][c]);
+                    if (table[row][column] == "X" || table[row][column] == "O") {
+                        out.println(table[row][column]);
                     } else {
                         out.println(".");
                     }
@@ -46,10 +46,10 @@ public class TicTacToe {
     }
 
     public static String[][] replacePosition(String scanValue, String move, String[][] table) {
-        for (int r = 0; r < table.length; r++) {
-            for (int c = 0; c < table.length; c++) {
-                if (scanValue.equals(table[r][c])) {
-                    table[r][c] = move;
+        for (int row = 0; row < table.length; row++) {
+            for (int column = 0; column < table.length; column++) {
+                if (scanValue.equals(table[row][column])) {
+                    table[row][column] = move;
                     break;
                 }
             }
@@ -89,9 +89,9 @@ public class TicTacToe {
 
     public static boolean isGameDraw(String[][] table) {
         boolean isDraw = true;
-        for (int r = 0; r < table.length; r++) {
-            for (int c = 0; c < table.length; c++) {
-                if (!(table[r][c].equals("X") || table[r][c].equals("O"))) {
+        for (int row = 0; row < table.length; row++) {
+            for (int column = 0; column < table.length; column++) {
+                if (!(table[row][column].equals("X") || table[row][column].equals("O"))) {
                     return false;
                 }
             }
@@ -131,11 +131,11 @@ public class TicTacToe {
 
     public static String rowWinner(String[][] table) {
         String winner = "";
-        for (int r = 0; r < table.length; r++) {
+        for (int row = 0; row < table.length; row++) {
             String firstValue = table[r][0];
-            for (int c = 0; c < table.length; c++) {
-                if (table[r][c].equals(firstValue)) {
-                    if (c == table.length - 1) {
+            for (int column = 0; column < table.length; column++) {
+                if (table[row][column].equals(firstValue)) {
+                    if (column == table.length - 1) {
                         winner = firstValue;
                     }
                 } else {
@@ -151,11 +151,11 @@ public class TicTacToe {
 
     public static String columnWinner(String[][] table) {
         String winner = "";
-        for (int c = 0; c < table.length; c++) {
-            String firstValue = table[0][c];
-            for (int r = 0; r < table.length; r++) {
-                if (table[r][c].equals(firstValue)) {
-                    if (r == table.length - 1) {
+        for (int column = 0; column < table.length; column++) {
+            String firstValue = table[0][column];
+            for (int row = 0; row < table.length; row++) {
+                if (table[row][column].equals(firstValue)) {
+                    if (row == table.length - 1) {
                         winner = firstValue;
                     }
                 } else {
@@ -188,10 +188,10 @@ public class TicTacToe {
     public static String rightDiagonalWinner(String[][] table) {
         /*String firstValue = table[0][2];
         String winner = "";
-        for (int r = 0; r < table.length; r++) {
-            for (int c = 2; c > 0; c--) {
-                if (table[r][c].equals(firstValue)) {
-                    if (c == 0) {
+        for (int row = 0; row < table.length; row++) {
+            for (int column = 2; column > 0; column--) {
+                if (table[row][column].equals(firstValue)) {
+                    if (column == 0) {
                         winner = firstValue;
                         break;
                     }
